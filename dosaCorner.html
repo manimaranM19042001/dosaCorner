@@ -86,27 +86,29 @@
         // Function 6 : Print text
 
         function printThanksMessageOne() {
-            console.log(`\nThanks for ordering`)
-            console.log(`\nPlease wait for a while .......`)
+            document.write(`\nThanks for ordering`,"<br><br>")
+            document.write(`\nPlease wait for a while .......`,"<br><br>")
         }
 
         // Function 7 : Print text and table of the order details
 
         function showOrderDetails() {
-            console.log(`\nYour order details`)
-            console.table(orderDetails)
+            document.write(`\n  Your order details`,"<br><br>")
+            for (types in orderDetails){
+                document.write("    ",`${types} : ${orderDetails[types]}`,"<br>")
+            }
         }
 
         // Function 8 : Print text
 
         function printWaitMesssage() {
-            console.log(`\nPlease wait for 5 minutes to get your order`)
+            document.write("<br>",`\nPlease wait for 5 minutes to get your order`,"<br><br>")
         }
 
         // Function 9 : Print thanks text
 
         function printThanksMessageTwo() {
-            console.log(`\n________________ Thank you ________________`)
+            document.write(`\n_____________ Thank you _____________`,"<br><br>")
 
         }
 
