@@ -96,11 +96,11 @@
                 } else if ((idlyPowderChoice == "no")) {
                     orderDetails.idlyPowder = ("❌")
                 } else if ((idlyPowderChoice == "")) {
-                    alert("You have entered nothing\n\nPlease enter your answer again")
+                    alert("You have entered nothing\n\n    Please enter your answer again")
                     iteration--
                 }
                 else {
-                    alert("Invalid input\n\nPlease enter only Yes or No")
+                    alert("Invalid input\n\n    Please enter only Yes or No")
                     iteration--
                 }
             }
@@ -112,7 +112,7 @@
             document.write(`<i><<<   Thanks for ordering   >>></i>`, "<br><br>")
             document.write(`<i>>>>   Please wait for a while .......</i>`, "<br><br>")
             setTimeout(() => {
-                document.write("<br>")
+                document.write("<hr><br>")
             }, 1000)
         }
 
@@ -142,32 +142,28 @@
 
         // Function 10 : Callback function
 
-        function takeOrder(greet, batter, topping, ghee, cheese, idlyPowder, thanksMessageOne, showDetails, thanksMessageTwo, waitMessage) {
+        function takeOrder(batter, topping, ghee, cheese, idlyPowder, thanksMessageOne, showDetails, waitMessage, thanksMessageTwo) {
             alert(`Welcom to ARUS DOSA CORNER\n\nPress 'ok' to proceed further`)
-            greet()
             batter()
             topping()
             ghee()
             cheese()
             idlyPowder()
             setTimeout(() => {
+                thanksMessageOne()
                 setTimeout(() => {
-                    thanksMessageOne()
+                    showDetails()
                     setTimeout(() => {
-                        showDetails()
+                        thanksMessageTwo()
                         setTimeout(() => {
-                            thanksMessageTwo()
-                            setTimeout(() => {
-                                waitMessage()
-                            }, 1000)
+                            waitMessage()
                         }, 1000)
-                    }, 2000)
-                }, 4000)
+                    }, 1000)
+                }, 3000)
             }, 1000)
         }
 
         takeOrder(getBatterType, getToppingType, getGhee, getCheese, getIdlyPowder, printThanksMessageOne, showOrderDetails, printWaitMesssage, printThanksMessageTwo)
-
 
     </script>
 </body>
